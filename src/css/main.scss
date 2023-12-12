@@ -92,7 +92,7 @@ body {
                     size: $norm-font-size;
                 }
             }
-            .pub-blocks {
+            #pub-blocks {
                 .pub-block {
                     display: flex;
                     justify-content: space-between;
@@ -148,6 +148,28 @@ body {
                             padding: 10px;
                         }
                     }
+                }
+            }
+        }
+
+        #res-blocks {
+            .res-block {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 95%;
+                margin: 0 auto 20px auto;
+                .info {
+                    h3 {
+                        margin: 0;
+                    }
+                    p {
+                        margin: 0;
+                        margin-left: 15px;
+                    }
+                }
+                img {
+                    width: 13%;
                 }
             }
         }
