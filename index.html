@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruisen Tu</title>
+
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="icon" type="image/png" href="src/assets/potato.jpg">
+    <!-- font-awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap&family=Kanit:wght@300&family=Mina&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <span class="name">Ruisen Tu</span>
+        <div class="nav-right">
+            <a href="" id="a-home">Home</a>
+            <a href="" id="a-publications">Publications</a>
+            <a href="" id="a-research">Research</a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div id="intro">
+            <img src="src/assets/potato.jpg" alt="My selfie that only wise people can see">
+            <div class="info">
+                <h1>Ruisen Tu</h1>
+                <p>Fourth-year undergraduate student @ UIUC</p>
+                <div><a href="mailto:ruisent2@illinois.edu" title="email"><i class="fa-solid fa-envelope fa-2xl"></i></a></div>
+                <div><a href="./src/assets/CV.pdf" title="CV" target="_blank"><i class="fa-solid fa-file fa-2xl"></i></a></div>
+            </div>
+        </div>
+
+        <div id="about-me">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae quo aut adipisci nam perferendis obcaecati, accusamus atque placeat sit quas aliquid aspernatur harum animi, iusto ipsum dolor officia itaque rem praesentium. Voluptas adipisci nostrum dolorum, est consectetur deleniti quaerat sint ad odio molestiae sit quisquam aspernatur iure doloribus porro aperiam praesentium aut repellendus minus ratione. Tenetur ipsum quae excepturi harum a perspiciatis assumenda vero perferendis, fuga consequuntur cupiditate distinctio tempore eius asperiores ad recusandae possimus est iusto, sapiente quam eos repellat consequatur. Commodi odio natus fuga dolorum molestiae corporis, dolores officia inventore illum voluptatum cum ex praesentium libero! Alias fugit, necessitatibus dolorem ut officiis perspiciatis, magni voluptas mollitia aspernatur, perferendis laborum distinctio. Labore commodi quae cumque quam, nostrum hic quis eligendi ex laboriosam et, voluptas quod ipsam! Beatae qui nesciunt ex quisquam alias quo rerum tenetur inventore, voluptas perferendis et? Atque ipsum sint aperiam cumque. Reiciendis ullam est iure voluptatibus.</p>
+        </div>
+
+        <div id="publications" >
+            <h2>Publications <span>(*Equal contribution)</span></h2>
+            <div class="pub-blocks">
+                <div class="pub-block">
+                    <div class="poster-box"><img src="./src/assets/WildHands.png" alt=""></div>
+                    <div class="poster-info">
+                        <h4>3D Hand Pose Estimation in Egocentric Images in the Wild</h4>
+                        <p>Aditya Prakash, <span>Ruisen Tu</span>, Matthew Chang, Saurabh Gupta</p>
+                        <div class="acceptance">
+                            arXiv, 2023
+                        </div>
+                        <div class="links">
+                            <div class="abstract">[<a href="">Abstract</a>]</div>
+                            <div class="paper">[<a href="https://arxiv.org/abs/2312.06583" target="_blank">Paper</a>]</div>
+                            <div class="website">[<a href="https://ap229997.github.io/projects/hands/" target="_blank">Website</a>]</div>
+                            <div class="bibtex">[<a href="">Bibtex</a>]</div>
+                        </div>
+                        <div class="modal-abstract modal" style="display: none;">
+                            We present WildHands, a method for 3D hand pose estimation in egocentric images in the wild. This is challenging due to (a) lack of 3D hand pose annotations for images in the wild, and (b) a form of perspective distortion-induced shape ambiguity that arises in the analysis of crops around hands. For the former, we use auxiliary supervision on in-the-wild data in the form of segmentation masks & grasp labels in addition to 3D supervision available in lab datasets. For the latter, we provide spatial cues about the location of the hand crop in the camera's field of view. Our approach achieves the best 3D hand pose on the ARCTIC leaderboard and outperforms FrankMocap, a popular and robust approach for estimating hand pose in the wild, by 45.3% when evaluated on 2D hand pose on our EPIC-HandKps dataset.
+                        </div>
+                        <div class="modal-bibtex modal" style="display: none;">
+                            @misc{prakash20233d,<br>
+                                &emsp;title={3D Hand Pose Estimation in Egocentric Images in the Wild},<br>
+                                &emsp;author={Aditya Prakash and Ruisen Tu and Matthew Chang and Saurabh Gupta},<br>
+                                &emsp;year={2023},<br>
+                                &emsp;eprint={2312.06583},<br>
+                                &emsp;archivePrefix={arXiv},<br>
+                                &emsp;primaryClass={cs.CV}<br>
+                            }
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pub-block">
+                    <div class="poster-box"><img src="./src/assets/getting_away.png" alt=""></div>
+                    <div class="poster-info">
+                        <h4>Getting Away with More Network Pruning: From Sparsity to Geometry and Linear Regions</h4>
+                        <p>Junyang Cai*, Khai-Nguyen Nguyen*, Nishant Shrestha, Aidan Good, <span>Ruisen Tu</span>, Xin Yu, Shandian Zhe, Thiago Serra</p>
+                        <div class="acceptance">
+                            <p>International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (<span>CPAIOR</span>), 2023</p>
+                            <p>Sparsity in Neural Networks Workshop at <span>ICLR</span>, 2023</p>
+                        </div>
+                        <div class="links">
+                            <div class="abstract">[<a href="">Abstract</a>]</div>
+                            <div class="paper">[<a href="https://arxiv.org/abs/2301.07966" target="_blank">Paper</a>]</div>
+                            <div class="bibtex">[<a href="">Bibtex</a>]</div>
+                        </div>
+                        <div class="modal-abstract modal" style="display: none;">
+                            One surprising trait of neural networks is the extent to which their connections can be pruned with little to no effect on accuracy. But when we cross a critical level of parameter sparsity, pruning any further leads to a sudden drop in accuracy. This drop plausibly reflects a loss in model complexity, which we aim to avoid. In this work, we explore how sparsity also affects the geometry of the linear regions defined by a neural network, and consequently reduces the expected maximum number of linear regions based on the architecture. We observe that pruning affects accuracy similarly to how sparsity affects the number of linear regions and our proposed bound for the maximum number. Conversely, we find out that selecting the sparsity across layers to maximize our bound very often improves accuracy in comparison to pruning as much with the same sparsity in all layers, thereby providing us guidance on where to prune.
+                        </div>
+                        <div class="modal-bibtex modal" style="display: none;">
+                            @misc{cai2023getting,<br>
+                                &emsp;title={Getting Away with More Network Pruning: From Sparsity to Geometry and Linear Regions},<br>
+                                &emsp;author={Junyang Cai and Khai-Nguyen Nguyen and Nishant Shrestha and Aidan Good and Ruisen Tu and Xin Yu and Shandian Zhe and Thiago Serra},<br>
+                                &emsp;year={2023},<br>
+                                &emsp;eprint={2301.07966},<br>
+                                &emsp;archivePrefix={arXiv},<br>
+                                &emsp;primaryClass={cs.LG}<br>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="research">
+            <h2>Research Experience</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, enim? Consequuntur quae nemo dolorum beatae amet facilis dolore, ad distinctio illum voluptate architecto alias quia aliquam quis iste numquam omnis libero quas officiis quidem cum explicabo. Id optio perferendis impedit unde? Dolorem esse sit quasi pariatur expedita sint voluptas vero, minus cupiditate necessitatibus non laborum corporis ducimus doloremque itaque ipsam facere delectus consequuntur magnam porro inventore vel. Ipsum explicabo at laudantium nostrum officia voluptatum quibusdam ducimus placeat, nesciunt iste necessitatibus dicta dolorem ratione eos commodi minus excepturi, recusandae vero perferendis modi vel! Ipsam, sint! Exercitationem sed odio ad provident blanditiis.</p>
+        </div>
+    </div>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>

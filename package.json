@@ -1,0 +1,14 @@
+{
+  "name": "personal_webpage",
+  "version": "1.0.0",
+  "description": "Ruisen Tu's personal website",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruisen Tu",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

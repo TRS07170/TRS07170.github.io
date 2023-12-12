@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: "Mina", sans-serif;
+  font-size: 17px;
+  color: rgb(98, 98, 98);
+}
+body a {
+  text-decoration: none;
+  color: rgb(122, 178, 243);
+}
+body nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px 10px 40px;
+  border-bottom: 1px solid rgb(214, 205, 205);
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+}
+body nav .name {
+  font-size: 30px;
+}
+body nav .nav-right {
+  display: flex;
+  align-items: center;
+}
+body nav .nav-right a {
+  margin-left: 30px;
+  color: rgb(98, 98, 98);
+}
+body .content {
+  margin: 30px 23%;
+}
+body .content h2 {
+  margin-bottom: 20px;
+}
+body .content #intro {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+body .content #intro img {
+  width: 40%;
+  max-width: 250px;
+  max-height: auto;
+  border: 5px solid rgb(214, 205, 205);
+  border-radius: 50%;
+}
+body .content #intro .info {
+  padding-top: 20px;
+}
+body .content #intro .info h1 {
+  margin-bottom: 0;
+}
+body .content #intro .info p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+body .content #intro .info div {
+  display: inline-block;
+  margin-right: 20px;
+}
+body .content #about-me {
+  margin-bottom: 60px;
+}
+body .content #publications {
+  margin-bottom: 60px;
+}
+body .content #publications h2 > span {
+  font-weight: normal;
+  font-size: 17px;
+}
+body .content #publications .pub-blocks .pub-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(214, 205, 205);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px -5px rgba(98, 98, 98, 0.284);
+}
+body .content #publications .pub-blocks .pub-block .poster-box {
+  flex-grow: 1;
+  width: 32%;
+  margin-right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .content #publications .pub-blocks .pub-block .poster-box img {
+  height: 100%;
+  max-width: 100%;
+  max-height: 200px;
+}
+body .content #publications .pub-blocks .pub-block .poster-info {
+  flex-grow: 1;
+  width: 65%;
+}
+body .content #publications .pub-blocks .pub-block .poster-info h4, body .content #publications .pub-blocks .pub-block .poster-info p {
+  margin: 10px 0;
+}
+body .content #publications .pub-blocks .pub-block .poster-info h4 span, body .content #publications .pub-blocks .pub-block .poster-info p span {
+  font-weight: bold;
+}
+body .content #publications .pub-blocks .pub-block .poster-info h4 {
+  margin-top: 0;
+}
+body .content #publications .pub-blocks .pub-block .poster-info .acceptance {
+  font-style: italic;
+}
+body .content #publications .pub-blocks .pub-block .poster-info .acceptance p {
+  margin: 0;
+}
+body .content #publications .pub-blocks .pub-block .poster-info .links {
+  margin-top: 10px;
+}
+body .content #publications .pub-blocks .pub-block .poster-info .links div {
+  display: inline-block;
+}
+body .content #publications .pub-blocks .pub-block .poster-info .modal {
+  margin-top: 15px;
+  border: 1px solid rgb(214, 205, 205);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
