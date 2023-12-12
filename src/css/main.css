@@ -45,7 +45,7 @@ body .content #intro img {
   width: 40%;
   max-width: 250px;
   max-height: auto;
-  border: 5px solid rgb(214, 205, 205);
+  border: 1px solid rgb(214, 205, 205);
   border-radius: 50%;
 }
 body .content #intro .info {
@@ -64,6 +64,11 @@ body .content #intro .info div {
 }
 body .content #about-me {
   margin-bottom: 60px;
+}
+body .content #about-me .custom-br {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 body .content #publications {
   margin-bottom: 60px;
