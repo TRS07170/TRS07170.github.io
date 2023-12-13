@@ -45,8 +45,7 @@ body .content #intro img {
   width: 40%;
   max-width: 250px;
   max-height: auto;
-  border: 1px solid rgb(214, 205, 205);
-  border-radius: 50%;
+  border-radius: 10%;
 }
 body .content #intro .info {
   padding-top: 20px;
