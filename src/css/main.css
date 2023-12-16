@@ -61,6 +61,15 @@ body .content #intro .info div {
   display: inline-block;
   margin-right: 20px;
 }
+body .content #motto {
+  margin: 60px 40px;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid rgb(214, 205, 205);
+  border-bottom: 1px solid rgb(214, 205, 205);
+  font-size: 28px;
+  font-style: italic;
+}
 body .content #about-me {
   margin-bottom: 60px;
 }

@@ -75,6 +75,17 @@ body {
                 }
             }
         }
+        #motto {
+            margin: 60px 40px;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+            font: {
+                size: 28px;
+                style: italic;
+            }
+        }
         #about-me {
             margin-bottom: 60px;
             .custom-br {
