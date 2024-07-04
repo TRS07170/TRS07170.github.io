@@ -31,7 +31,7 @@ body nav .nav-right a {
   color: rgb(98, 98, 98);
 }
 body .content {
-  margin: 30px 23%;
+  margin: 60px 23%;
 }
 body .content h2 {
   margin-bottom: 20px;
@@ -124,8 +124,8 @@ body .content #publications #pub-blocks .pub-block .poster-info h4 {
 body .content #publications #pub-blocks .pub-block .poster-info .acceptance {
   font-style: italic;
 }
-body .content #publications #pub-blocks .pub-block .poster-info .acceptance p {
-  margin: 0;
+body .content #publications #pub-blocks .pub-block .poster-info .acceptance .conference {
+  font-weight: bold;
 }
 body .content #publications #pub-blocks .pub-block .poster-info .links {
   margin-top: 10px;
