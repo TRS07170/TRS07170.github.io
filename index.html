@@ -63,37 +63,63 @@
             <h2>Publications <span>(*Equal contribution)</span></h2>
             <div id="pub-blocks">
                 <div class="pub-block">
-                    <div class="poster-box"><img src="./src/assets/WildHands.png" alt=""></div>
+                    <div class="poster-box"><img src="./src/assets/posters/WildHands.png" alt=""></div>
                     <div class="poster-info">
-                        <h4>3D Hand Pose Estimation in Egocentric Images in the Wild</h4>
+                        <h4>3D Hand Pose Estimation in Everyday Egocentric Images</h4>
                         <p>Aditya Prakash, <span>Ruisen Tu</span>, Matthew Chang, Saurabh Gupta</p>
                         <div class="acceptance">
                             European Conference on Computer Vision <span class="conference">(ECCV)</span>, 2024
                         </div>
                         <div class="links">
                             <div class="abstract">[<a href="">Abstract</a>]</div>
-                            <div class="paper">[<a href="https://arxiv.org/abs/2312.06583" target="_blank">Paper</a>]</div>
+                            <!-- <div class="paper">[<a href="https://arxiv.org/abs/2312.06583" target="_blank">Paper</a>]</div> -->
                             <div class="website">[<a href="https://ap229997.github.io/projects/hands/" target="_blank">Website</a>]</div>
                             <div class="bibtex">[<a href="">Bibtex</a>]</div>
                         </div>
                         <div class="modal-abstract modal" style="display: none;">
-                            We present WildHands, a method for 3D hand pose estimation in egocentric images in the wild. This is challenging due to (a) lack of 3D hand pose annotations for images in the wild, and (b) a form of perspective distortion-induced shape ambiguity that arises in the analysis of crops around hands. For the former, we use auxiliary supervision on in-the-wild data in the form of segmentation masks & grasp labels in addition to 3D supervision available in lab datasets. For the latter, we provide spatial cues about the location of the hand crop in the camera's field of view. Our approach achieves the best 3D hand pose on the ARCTIC leaderboard and outperforms FrankMocap, a popular and robust approach for estimating hand pose in the wild, by 45.3% when evaluated on 2D hand pose on our EPIC-HandKps dataset.
+                            3D hand pose estimation in everyday egocentric images is challenging for several reasons: poor visual signal (occlusion from the object of interaction, low resolution & motion blur), large perspective distortion (hands are close to the camera), and lack of 3D annotations outside of controlled settings. While existing methods often use hand crops as input to focus on fine-grained visual information to deal with poor visual signal, the challenges arising from perspective distortion and lack of 3D annotations in the wild have not been systematically studied. We focus on this gap and explore the impact of different practices, i.e. crops as input, incorporating camera information, auxiliary supervision, scaling up datasets. We provide several insights that are applicable to both convolutional and transformer models leading to better performance. Based on our findings, we also present WildHands, a system for 3D hand pose estimation in everyday egocentric images. Zero-shot evaluation on 4 diverse datasets (H2O, AssemblyHands, Epic-Kitchens, Ego-Exo4D) demonstrate the effectiveness of our approach across 2D and 3D metrics, where we beat past methods by 7.4% - 66%. In system level comparisons, WildHands achieves the best 3D hand pose on ARCTIC egocentric split, outperforms FrankMocap across all metrics and HaMeR on 3 out of 6 metrics while being 10x smaller and trained on 5x less data.
                         </div>
                         <div class="modal-bibtex modal" style="display: none;">
-                            @misc{prakash20233d,<br>
-                                &emsp;title={3D Hand Pose Estimation in Egocentric Images in the Wild},<br>
-                                &emsp;author={Aditya Prakash and Ruisen Tu and Matthew Chang and Saurabh Gupta},<br>
-                                &emsp;year={2023},<br>
-                                &emsp;eprint={2312.06583},<br>
-                                &emsp;archivePrefix={arXiv},<br>
-                                &emsp;primaryClass={cs.CV}<br>
-                            }
+                            @inproceedings{Prakash2024Hands,
+                                <br>author = {Prakash, Aditya and Tu, Ruisen and Chang, Matthew and Gupta, Saurabh},
+                                <br>title = {3D Hand Pose Estimation in Everyday Egocentric Images},
+                                <br>booktitle = {European Conference on Computer Vision (ECCV)},
+                                <br>year = {2024}
+                                <br>}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-block">
+                    <div class="poster-box"><img src="./src/assets/posters/3D_reconstruction_of_objects_in_hands_without_real_world_3D_supervision.jpg" alt=""></div>
+                    <div class="poster-info">
+                        <h4>3D Reconstruction of Objects in Hands without Real World 3D Supervision</h4>
+                        <p>Aditya Prakash, Matthew Chang, Matthew Jin, <span>Ruisen Tu</span>, Saurabh Gupta</p>
+                        <div class="acceptance">
+                            European Conference on Computer Vision <span class="conference">(ECCV)</span>, 2024
+                        </div>
+                        <div class="links">
+                            <div class="abstract">[<a href="">Abstract</a>]</div>
+                            <!-- <div class="paper">[<a href="https://arxiv.org/abs/2312.06583" target="_blank">Paper</a>]</div> -->
+                            <div class="website">[<a href="https://ap229997.github.io/projects/wild-hoi/" target="_blank">Website</a>]</div>
+                            <div class="bibtex">[<a href="">Bibtex</a>]</div>
+                        </div>
+                        <div class="modal-abstract modal" style="display: none;">
+                            Prior works for reconstructing hand-held objects from a single image train models on images paired with 3D shapes. Such data is challenging to gather in the real world at scale. Consequently, these approaches do not generalize well when presented with novel objects in in-the-wild settings. While 3D supervision is a major bottleneck, there is an abundance of a) in-the-wild raw video data showing hand-object interactions and b) synthetic 3D shape collections. In this paper, we propose modules to leverage 3D supervision from these sources to scale up the learning of models for reconstructing hand-held objects. Specifically, we extract multiview 2D mask supervision from videos and 3D shape priors from shape collections. We use these indirect 3D cues to train occupancy networks that predict the 3D shape of objects from a single RGB image. Our experiments in the challenging object generalization setting on in-the-wild MOW dataset show 11.6% relative improvement over models trained with 3D supervision on existing datasets.
+                        </div>
+                        <div class="modal-bibtex modal" style="display: none;">
+                            @inproceedings{Prakash2024HOI,
+                                <br>author = {Prakash, Aditya and Chang, Matthew and Jin, Matthew and Tu, Ruisen and Gupta, Saurabh},
+                                <br>title = {3D Reconstruction of Objects in Hands without Real World 3D Supervision},
+                                <br>booktitle = {European Conference on Computer Vision (ECCV)},
+                                <br>year = {2024}
+                                <br>}
                         </div>
                     </div>
                 </div>
                 
                 <div class="pub-block">
-                    <div class="poster-box"><img src="./src/assets/getting_away.png" alt=""></div>
+                    <div class="poster-box"><img src="./src/assets/posters/getting_away.png" alt=""></div>
                     <div class="poster-info">
                         <h4>Getting Away with More Network Pruning: From Sparsity to Geometry and Linear Regions</h4>
                         <p>Junyang Cai*, Khai-Nguyen Nguyen*, Nishant Shrestha, Aidan Good, <span>Ruisen Tu</span>, Xin Yu, Shandian Zhe, Thiago Serra</p>
@@ -110,14 +136,14 @@
                             One surprising trait of neural networks is the extent to which their connections can be pruned with little to no effect on accuracy. But when we cross a critical level of parameter sparsity, pruning any further leads to a sudden drop in accuracy. This drop plausibly reflects a loss in model complexity, which we aim to avoid. In this work, we explore how sparsity also affects the geometry of the linear regions defined by a neural network, and consequently reduces the expected maximum number of linear regions based on the architecture. We observe that pruning affects accuracy similarly to how sparsity affects the number of linear regions and our proposed bound for the maximum number. Conversely, we find out that selecting the sparsity across layers to maximize our bound very often improves accuracy in comparison to pruning as much with the same sparsity in all layers, thereby providing us guidance on where to prune.
                         </div>
                         <div class="modal-bibtex modal" style="display: none;">
-                            @misc{cai2023getting,<br>
-                                &emsp;title={Getting Away with More Network Pruning: From Sparsity to Geometry and Linear Regions},<br>
-                                &emsp;author={Junyang Cai and Khai-Nguyen Nguyen and Nishant Shrestha and Aidan Good and Ruisen Tu and Xin Yu and Shandian Zhe and Thiago Serra},<br>
-                                &emsp;year={2023},<br>
-                                &emsp;eprint={2301.07966},<br>
-                                &emsp;archivePrefix={arXiv},<br>
-                                &emsp;primaryClass={cs.LG}<br>
-                            }
+                            @misc{cai2023getting,
+                                <br>title={Getting Away with More Network Pruning: From Sparsity to Geometry and Linear Regions},
+                                <br>author={Junyang Cai and Khai-Nguyen Nguyen and Nishant Shrestha and Aidan Good and Ruisen Tu and Xin Yu and Shandian Zhe and Thiago Serra},
+                                <br>year={2023},
+                                <br>eprint={2301.07966},
+                                <br>archivePrefix={arXiv},
+                                <br>primaryClass={cs.LG}
+                                <br>}
                         </div>
                     </div>
                 </div>
