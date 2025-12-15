@@ -34,7 +34,7 @@
                 <p>CSE Master's Student @ UCSD</p>
                 <div><a href="mailto:ruisent2@illinois.edu" title="email"><i class="fa-solid fa-envelope fa-2xl"></i></a></div>
                 <!-- <div><a href="./src/assets/CV.pdf" title="CV" target="_blank"><i class="fa-solid fa-file fa-2xl"></i></a></div> -->
-                <div><a href="https://drive.google.com/file/d/1UuPE_aaQ5HiZBu8-V9kEKe01oOA_YdXK/view?usp=sharing" title="CV" target="_blank"><i class="fa-solid fa-file fa-2xl"></i></a></div>
+                <div><a href="https://drive.google.com/file/d/1cfQZWP6vH8WZCJaiCmjnIXacaBsCxBVd/view?usp=sharing" title="CV" target="_blank"><i class="fa-solid fa-file fa-2xl"></i></a></div>
                 <div><a href="https://github.com/TRS07170" title="GitHub" target="_blank"><i class="fa-brands fa-square-github fa-2xl"></i></a></div>
                 <div><a href="https://twitter.com/traysen879" title="X" target="_blank"><i class="fa-brands fa-square-x-twitter fa-2xl"></i></a></div>
             </div>
@@ -47,14 +47,14 @@
 
         <div id="about-me">
             <h2>About me</h2>
-            <p> I am currently a first-year Master's student studying Computer Science at <a href="https://cse.ucsd.edu/" target="_blank">University of California, San Diego</a> (UCSD). Before this, 
-                I earned my Bachelor's degree at the <a href="https://cs.illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a> (UIUC). 
-                My research interests lie mainly in Computer Vision (2D & 3D) and Machine Learning. I am also interested in exploring reinforcement learning.
-                I aim to build intelligent tools and agents that can understand, enhance, and interact with the world around us. <span class="custom-br"></span>
-                At UIUC, I have had the opportunity to work with <a href="https://saurabhg.web.illinois.edu/" target="_blank">Prof. Saurabh Gupta</a> and 
-                <a href="https://ap229997.github.io/" target="_blank">Aditya Prakash</a> on 3D hand pose reconstruction. 
-                I also met <a href="https://boranzhao.github.io/" target="_blank">Prof. Pan Zhao</a> here and collaborated with him on developing an agricultural RL Gymnasium. <span class="custom-br"></span>
-                Before transferring to UIUC, I spent the first two years of my undergraduate studies at <a href="https://www.bucknell.edu/" target="_blank">Bucknell University</a> (BU), 
+            <p> I am currently a second-year Master's student studying Computer Science at <a href="https://cse.ucsd.edu/" target="_blank">University of California, 
+                San Diego</a> (UCSD). I am interested in Embodied AI and Robotic Learning, with a specific focus on developing Vision-Language-Action (VLA) 
+                models that possess robust spatial grounding. My work aims to integrate explicit 3D geometric priors into large-scale foundation models, enabling 
+                mobile agents to navigate unstructured environments and interact safely with humans through socially aware perception.<span class="custom-br"></span>
+                
+                Before this, I earned my Bachelor's degree at the <a href="https://cs.illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a> (UIUC), 
+                where I have had the opportunity to work with <a href="https://saurabhg.web.illinois.edu/" target="_blank">Prof. Saurabh Gupta</a> and 
+                <a href="https://ap229997.github.io/" target="_blank">Aditya Prakash</a> on 3D hand pose reconstruction. Before transferring to UIUC, I spent the first two years of my undergraduate studies at <a href="https://www.bucknell.edu/" target="_blank">Bucknell University</a> (BU), 
                 where I had the chance to work with <a href="https://thiagoserra.com/" target="_blank">Prof. Thiago Serra</a> on Neural Network optimization.
             </p>
         </div>
@@ -62,6 +62,33 @@
         <div id="publications" >
             <h2>Publications <span>(*Equal contribution)</span></h2>
             <div id="pub-blocks">
+                <div class="pub-block">
+                    <div class="poster-box"><img src="./src/assets/posters/sg_vla.png" alt=""></div>
+                    <div class="poster-info">
+                        <h4>SG-VLA: Learning Spatially-Grounded Vision-Language-Action Models for Mobile Manipulation</h4>
+                        <p><span>Ruisen Tu</span>, Arth Shukla, Sohyun Yoo, Xuanlin Li, Junxi Li, Jianwen Xie, Hao Su, Zhuowen Tu</p>
+                        <div class="acceptance">
+                            Under review
+                        </div>
+                        <div class="links">
+                            <div class="abstract">[<a href="">Abstract</a>]</div>
+                            <!-- <div class="website">[<a href="https://ap229997.github.io/projects/hands/" target="_blank">Website</a>]</div>
+                            <div class="bibtex">[<a href="">Bibtex</a>]</div> -->
+                        </div>
+                        <div class="modal-abstract modal" style="display: none;">
+                            Vision-Language-Action (VLA) models have demonstrated promising capabilities for robotic control, yet their performance in complex household environments remains far from optimal. Mobile manipulation tasks require robots to simultaneously reason about global scene layout, fine-grained object geometry, and high-dimensional continuous actions, making standard imitation learning insufficient for robust control. In this work, we introduce a framework for learning spatially-grounded VLA models that strengthens both perception and representation learning through auxiliary task co-training and multi-modal input enhancement. Our method addresses the challenge of controlling a 13-dimensional action space involving coordinated base motion, arm articulation, and gripper actuation. To enrich spatial understanding, the model incorporates multi-view RGB observations, depth cues, and short temporal history, providing complementary perspectives of both global scene structure and local manipulation context. To further improve representation quality, we co-train a suite of auxiliary decoders that reconstruct interpretable intermediate signals—including global robot position, joint configurations, grasp affordances, target-object relative pose, and segmentation masks—from shared visual-language features. These auxiliary objectives supply dense supervision that encourages the backbone to develop spatially grounded, manipulation-aware latent representations. Through extensive evaluation on home rearrangement tasks, our approach achieves consistent improvements across picking, placing, opening, and closing operations, substantially outperforming direct imitation learning applied to the same architecture. We hypothesize that the combination of spatially informative inputs and structured auxiliary supervision enhances both scene reasoning and low-level control accuracy. Overall, our findings suggest that spatial grounding through auxiliary and multi-modal learning provides a strong direction for scaling VLA models toward general-purpose domestic robots.
+                        </div>
+                        <!-- <div class="modal-bibtex modal" style="display: none;">
+                            @inproceedings{Prakash2024Hands,
+                                <br>author = {Prakash, Aditya and Tu, Ruisen and Chang, Matthew and Gupta, Saurabh},
+                                <br>title = {3D Hand Pose Estimation in Everyday Egocentric Images},
+                                <br>booktitle = {European Conference on Computer Vision (ECCV)},
+                                <br>year = {2024}
+                                <br>}
+                        </div> -->
+                    </div>
+                </div>
+
                 <div class="pub-block">
                     <div class="poster-box"><img src="./src/assets/posters/WildHands.png" alt=""></div>
                     <div class="poster-info">
@@ -153,6 +180,14 @@
         <div id="research">
             <h2>Research Experience</h2>
             <div id="res-blocks">
+                <div class="res-block">
+                    <div class="info">
+                        <h3>Machine Learning, Perception, and Cognition Lab (mlPC), UC San Diego</h3>
+                        <p>Research Intern. Feb 2025-Present</p>
+                        <p>Supervisor: <a href="https://pages.ucsd.edu/~ztu/" target="_blank">Prof. Zhuowen Tu</a></p>
+                    </div>
+                    <img src="./src/assets/ucsd_badge.svg" alt="UCSD Badge">
+                </div>
                 <div class="res-block">
                     <div class="info">
                         <h3>Gupta AI Lab, University of Illinois Urbana-Champaign</h3>
