@@ -385,13 +385,20 @@ nav .nav-right a:active {
   content: "02 / ";
 }
 
-#publications h2 > span {
-  display: block;
-  margin-top: 7px;
+#publications > h2 {
+  margin-bottom: 14px;
+}
+
+#publications .equal-contribution {
+  margin: 0 0 34px;
+  padding-left: 10px;
+  border-left: 3px solid var(--pink);
+  color: var(--muted);
   font-family: var(--mono);
   font-size: clamp(0.62rem, 1vw, 0.78rem);
   font-weight: 700;
   letter-spacing: 0;
+  line-height: 1.4;
 }
 
 #pub-blocks {
@@ -487,7 +494,7 @@ nav .nav-right a:active {
   border-radius: 999px;
   background: var(--accent-gradient);
   box-shadow: none;
-  content: "WORK / 0" counter(publication);
+  content: "0" counter(publication) " / PAPER";
   font-family: var(--mono);
   font-size: 0.68rem;
   font-weight: 700;
@@ -615,14 +622,27 @@ nav .nav-right a:active {
 }
 
 #res-blocks {
+  position: relative;
   display: grid;
   gap: 24px;
+  padding-left: 88px;
   counter-reset: research;
 }
 
+#res-blocks::before {
+  position: absolute;
+  top: 27px;
+  bottom: 27px;
+  left: 27px;
+  width: 2px;
+  background: var(--ink);
+  content: "";
+}
+
 #res-blocks .res-block {
+  position: relative;
   display: grid;
-  grid-template-columns: 70px 1fr 92px;
+  grid-template-columns: minmax(110px, 180px) minmax(0, 1fr);
   min-height: 150px;
   align-items: center;
   gap: 24px;
@@ -646,6 +666,10 @@ nav .nav-right a:active {
 }
 
 #res-blocks .res-block::before {
+  position: absolute;
+  top: 50%;
+  left: -88px;
+  z-index: 1;
   display: grid;
   width: 54px;
   height: 54px;
@@ -658,10 +682,16 @@ nav .nav-right a:active {
   font-family: var(--mono);
   font-size: 0.82rem;
   font-weight: 700;
+  transform: translateY(-50%);
 }
 
 #res-blocks .res-block:nth-child(even)::before {
   background: var(--paper);
+}
+
+#res-blocks .res-block .info {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 #res-blocks .res-block .info h3 {
@@ -683,11 +713,38 @@ nav .nav-right a:active {
 }
 
 #res-blocks .res-block img {
+  grid-column: 1;
+  grid-row: 1;
   width: 76px;
   max-height: 76px;
-  justify-self: end;
+  justify-self: center;
   object-fit: contain;
   filter: grayscale(0.12) contrast(1.06);
+}
+
+#res-blocks .artly-logo-link {
+  grid-column: 1;
+  grid-row: 1;
+  display: inline-flex;
+  justify-self: center;
+  transition: transform 140ms ease;
+}
+
+#res-blocks .artly-logo-link:hover {
+  transform: translateY(-2px);
+}
+
+#res-blocks .artly-logo-link:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 5px;
+  background: transparent;
+}
+
+#res-blocks .res-block .artly-logo {
+  display: block;
+  width: min(100%, 170px);
+  max-height: 54px;
+  filter: none;
 }
 
 @media (max-width: 800px) {
@@ -748,8 +805,24 @@ nav .nav-right a:active {
   }
 
   #res-blocks .res-block {
-    grid-template-columns: 58px 1fr 72px;
+    grid-template-columns: 120px minmax(0, 1fr);
     padding: 23px 22px;
+  }
+
+  #res-blocks {
+    padding-left: 72px;
+  }
+
+  #res-blocks::before {
+    top: 24px;
+    bottom: 24px;
+    left: 24px;
+  }
+
+  #res-blocks .res-block::before {
+    left: -72px;
+    width: 48px;
+    height: 48px;
   }
 
   #res-blocks .res-block img {
@@ -840,22 +913,45 @@ nav .nav-right a:active {
   }
 
   #res-blocks .res-block {
-    grid-template-columns: 46px 1fr;
-    gap: 17px;
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 15px;
     padding: 20px 18px;
     box-shadow: none;
   }
 
+  #res-blocks {
+    gap: 18px;
+    padding-left: 56px;
+  }
+
+  #res-blocks::before {
+    top: 19px;
+    bottom: 19px;
+    left: 19px;
+  }
+
   #res-blocks .res-block::before {
-    width: 42px;
-    height: 42px;
+    left: -56px;
+    width: 38px;
+    height: 38px;
+    font-size: 0.68rem;
   }
 
   #res-blocks .res-block img {
-    grid-column: 2;
-    width: 56px;
-    margin-top: 5px;
-    justify-self: start;
+    grid-column: 1;
+    width: 48px;
+    margin-top: 0;
+    justify-self: center;
+  }
+
+  #res-blocks .res-block .artly-logo {
+    width: min(100%, 84px);
+    max-height: 44px;
+  }
+
+  #res-blocks .artly-logo-link {
+    grid-column: 1;
+    justify-self: center;
   }
 }
 
