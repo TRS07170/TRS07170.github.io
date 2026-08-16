@@ -410,7 +410,7 @@ nav .nav-right a:active {
   position: relative;
   display: grid;
   grid-template-columns: minmax(260px, 40%) 1fr;
-  align-items: center;
+  align-items: start;
   gap: clamp(34px, 6vw, 72px);
   padding: clamp(26px, 4vw, 42px);
   border: var(--border);
@@ -597,7 +597,8 @@ nav .nav-right a:active {
   max-height: 320px;
   margin-top: 24px;
   padding: 18px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   border: var(--border);
   border-radius: 14px;
   color: var(--ink);
@@ -605,6 +606,23 @@ nav .nav-right a:active {
   box-shadow: none;
   font-size: 0.8rem;
   line-height: 1.65;
+  scrollbar-color: var(--muted) transparent;
+  scrollbar-width: thin;
+}
+
+.pub-block .modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.pub-block .modal::-webkit-scrollbar-track {
+  margin-block: 10px;
+  background: transparent;
+}
+
+.pub-block .modal::-webkit-scrollbar-thumb {
+  border: 3px solid var(--paper);
+  border-radius: 999px;
+  background: var(--muted);
 }
 
 .pub-block .modal-bibtex {
