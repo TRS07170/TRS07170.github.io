@@ -451,6 +451,7 @@ nav .nav-right a:active {
   display: flex;
   width: 100%;
   min-height: 240px;
+  align-self: center;
   align-items: center;
   justify-content: center;
   padding: 16px;
@@ -594,20 +595,41 @@ nav .nav-right a:active {
 }
 
 .pub-block .modal {
-  max-height: 320px;
-  margin-top: 24px;
-  padding: 18px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  max-height: 0;
+  margin-top: 0;
+  padding: 0 18px;
+  overflow: hidden;
   border: var(--border);
+  border-top-width: 0;
+  border-bottom-width: 0;
   border-radius: 14px;
   color: var(--ink);
   background: var(--paper);
   box-shadow: none;
   font-size: 0.8rem;
   line-height: 1.65;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: max-height 380ms ease, margin-top 380ms ease, padding 380ms ease,
+    border-width 380ms ease, opacity 180ms ease, transform 380ms ease,
+    visibility 0s linear 380ms;
   scrollbar-color: var(--muted) transparent;
   scrollbar-width: thin;
+}
+
+.pub-block .modal.is-open {
+  max-height: 320px;
+  margin-top: 24px;
+  padding: 18px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
 }
 
 .pub-block .modal::-webkit-scrollbar {
@@ -623,6 +645,13 @@ nav .nav-right a:active {
   border: 3px solid var(--paper);
   border-radius: 999px;
   background: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pub-block .modal {
+    transition: none;
+    transform: none;
+  }
 }
 
 .pub-block .modal-bibtex {

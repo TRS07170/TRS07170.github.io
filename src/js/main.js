@@ -22,20 +22,50 @@ for (let i = 0; i < nav_as.length; i++) {
 }
 
 // Modal box
-document.querySelectorAll('.pub-block').forEach(function(pubBlock) {
+document.querySelectorAll('.pub-block').forEach(function(pubBlock, index) {
     var abstractLink = pubBlock.querySelector('.abstract a');
     var modalAbstract = pubBlock.querySelector('.modal-abstract');
     var bibtexLink = pubBlock.querySelector('.bibtex a');
     var modalBibtex = pubBlock.querySelector('.modal-bibtex');
 
+    modalAbstract.style.removeProperty('display');
+    modalAbstract.id = 'abstract-panel-' + index;
+    abstractLink.setAttribute('aria-controls', modalAbstract.id);
+
+    if (modalBibtex) {
+        modalBibtex.style.removeProperty('display');
+    }
+    if (bibtexLink && modalBibtex) {
+        modalBibtex.id = 'bibtex-panel-' + index;
+        bibtexLink.setAttribute('aria-controls', modalBibtex.id);
+    }
+
+    function setModalState(modal, link, isOpen) {
+        if (!modal) {
+            return;
+        }
+        modal.classList.toggle('is-open', isOpen);
+        modal.setAttribute('aria-hidden', String(!isOpen));
+        if (link) {
+            link.setAttribute('aria-expanded', String(isOpen));
+        }
+    }
+
+    setModalState(modalAbstract, abstractLink, false);
+    setModalState(modalBibtex, bibtexLink, false);
+
     abstractLink.addEventListener('click', function(event) {
         event.preventDefault();
-        modalAbstract.style.display = modalAbstract.style.display === 'none' ? 'block' : 'none';
-        modalBibtex.style.display = modalBibtex.style.display === 'block' ? 'none' : 'none';
+        var shouldOpen = !modalAbstract.classList.contains('is-open');
+        setModalState(modalBibtex, bibtexLink, false);
+        setModalState(modalAbstract, abstractLink, shouldOpen);
     });
-    bibtexLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        modalBibtex.style.display = modalBibtex.style.display === 'none' ? 'block' : 'none';
-        modalAbstract.style.display = modalAbstract.style.display === 'block' ? 'none' : 'none';
-    });
+    if (bibtexLink && modalBibtex) {
+        bibtexLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            var shouldOpen = !modalBibtex.classList.contains('is-open');
+            setModalState(modalAbstract, abstractLink, false);
+            setModalState(modalBibtex, bibtexLink, shouldOpen);
+        });
+    }
 });

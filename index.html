@@ -64,8 +64,8 @@
                         </div>
                         <div class="links">
                             <div class="abstract">[<a href="">Abstract</a>]</div>
+                            <div class="paper">[<a href="https://arxiv.org/abs/2603.22760" target="_blank" rel="noopener noreferrer">Paper</a>]</div>
                             <div class="arxiv">[<a href="https://trs07170.github.io/SG-VLA/" target="_blank">Website</a>]</div>
-                            <div class="bibtex">[<a href="">Bibtex</a>]</div>
                         </div>
                         <div class="modal-abstract modal" style="display: none;">
                             Vision-Language-Action (VLA) models show promise for robotic control, yet performance in complex household environments remains sub-optimal. Mobile manipulation requires reasoning about global scene layout, fine-grained geometry, and high-dimensional continuous actions, making standard imitation learning insufficient. We introduce a framework for learning spatially-grounded VLA models that strengthens perception and representation through auxiliary task co-training and multi-modal input enhancement. Our method addresses the challenge of controlling a 13-dimensional action space involving coordinated base motion, arm articulation, and gripper actuation. To enrich spatial understanding, the model incorporates multi-view RGB observations, depth cues, and short temporal history, providing perspectives of both global scene structure and local manipulation context. To improve representation quality, we co-train auxiliary decoders that reconstruct interpretable intermediate signals - including global robot position, joint configurations, grasp affordances, target-object relative pose, and segmentation masks - from shared visual-language features. These objectives provide dense supervision that encourages the backbone to develop spatially grounded, manipulation-aware latent representations. Through extensive evaluation on home rearrangement tasks, our approach achieves consistent improvements across picking, placing, opening, and closing operations, substantially outperforming direct imitation learning. Our findings suggest that spatial grounding through auxiliary and multi-modal learning provides a strong direction for scaling VLA models toward general-purpose domestic robots.
@@ -102,9 +102,8 @@
                         </div>
                         <div class="links">
                             <div class="abstract">[<a href="">Abstract</a>]</div>
-                            <!-- <div class="paper">[<a href="https://arxiv.org/abs/2312.06583" target="_blank">Paper</a>]</div> -->
+                            <div class="paper">[<a href="https://arxiv.org/abs/2312.06583" target="_blank" rel="noopener noreferrer">Paper</a>]</div>
                             <div class="website">[<a href="https://ap229997.github.io/projects/hands/" target="_blank">Website</a>]</div>
-                            <div class="bibtex">[<a href="">Bibtex</a>]</div>
                         </div>
                         <div class="modal-abstract modal" style="display: none;">
                             3D hand pose estimation in everyday egocentric images is challenging for several reasons: poor visual signal (occlusion from the object of interaction, low resolution & motion blur), large perspective distortion (hands are close to the camera), and lack of 3D annotations outside of controlled settings. While existing methods often use hand crops as input to focus on fine-grained visual information to deal with poor visual signal, the challenges arising from perspective distortion and lack of 3D annotations in the wild have not been systematically studied. We focus on this gap and explore the impact of different practices, i.e. crops as input, incorporating camera information, auxiliary supervision, scaling up datasets. We provide several insights that are applicable to both convolutional and transformer models leading to better performance. Based on our findings, we also present WildHands, a system for 3D hand pose estimation in everyday egocentric images. Zero-shot evaluation on 4 diverse datasets (H2O, AssemblyHands, Epic-Kitchens, Ego-Exo4D) demonstrate the effectiveness of our approach across 2D and 3D metrics, where we beat past methods by 7.4% - 66%. In system level comparisons, WildHands achieves the best 3D hand pose on ARCTIC egocentric split, outperforms FrankMocap across all metrics and HaMeR on 3 out of 6 metrics while being 10x smaller and trained on 5x less data.
@@ -130,9 +129,8 @@
                         </div>
                         <div class="links">
                             <div class="abstract">[<a href="">Abstract</a>]</div>
-                            <!-- <div class="paper">[<a href="https://arxiv.org/abs/2312.06583" target="_blank">Paper</a>]</div> -->
+                            <div class="paper">[<a href="https://arxiv.org/abs/2305.03036" target="_blank" rel="noopener noreferrer">Paper</a>]</div>
                             <div class="website">[<a href="https://ap229997.github.io/projects/wild-hoi/" target="_blank">Website</a>]</div>
-                            <div class="bibtex">[<a href="">Bibtex</a>]</div>
                         </div>
                         <div class="modal-abstract modal" style="display: none;">
                             Prior works for reconstructing hand-held objects from a single image train models on images paired with 3D shapes. Such data is challenging to gather in the real world at scale. Consequently, these approaches do not generalize well when presented with novel objects in in-the-wild settings. While 3D supervision is a major bottleneck, there is an abundance of a) in-the-wild raw video data showing hand-object interactions and b) synthetic 3D shape collections. In this paper, we propose modules to leverage 3D supervision from these sources to scale up the learning of models for reconstructing hand-held objects. Specifically, we extract multiview 2D mask supervision from videos and 3D shape priors from shape collections. We use these indirect 3D cues to train occupancy networks that predict the 3D shape of objects from a single RGB image. Our experiments in the challenging object generalization setting on in-the-wild MOW dataset show 11.6% relative improvement over models trained with 3D supervision on existing datasets.
@@ -160,7 +158,6 @@
                         <div class="links">
                             <div class="abstract">[<a href="">Abstract</a>]</div>
                             <div class="paper">[<a href="https://arxiv.org/abs/2301.07966" target="_blank">Paper</a>]</div>
-                            <div class="bibtex">[<a href="">Bibtex</a>]</div>
                         </div>
                         <div class="modal-abstract modal" style="display: none;">
                             One surprising trait of neural networks is the extent to which their connections can be pruned with little to no effect on accuracy. But when we cross a critical level of parameter sparsity, pruning any further leads to a sudden drop in accuracy. This drop plausibly reflects a loss in model complexity, which we aim to avoid. In this work, we explore how sparsity also affects the geometry of the linear regions defined by a neural network, and consequently reduces the expected maximum number of linear regions based on the architecture. We observe that pruning affects accuracy similarly to how sparsity affects the number of linear regions and our proposed bound for the maximum number. Conversely, we find out that selecting the sparsity across layers to maximize our bound very often improves accuracy in comparison to pruning as much with the same sparsity in all layers, thereby providing us guidance on where to prune.
